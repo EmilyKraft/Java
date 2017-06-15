@@ -57,7 +57,6 @@ public class StringTricks {
 		return reverseWord;
 		}
 	
-	
 	//this method removes the middle letter of a string (or middle two letters, if the length of the word is even)
 	public static String middleRemove(){
 		Scanner sc = new Scanner(System.in);
@@ -66,25 +65,14 @@ public class StringTricks {
 		String firstHalf = "";
 		String lastHalf = "";
 		if (s.length()%2==0){
-			for (int i = 0; i < (s.length()/2)-1; i++){
-				//firstHalf = s.substring(0, (s.length()/2-1));
-				//lastHalf = s.substring((s.length()/2+1));
-				firstHalf += Character.toString(s.charAt(i));
-			}
-			for (int i = (s.length()/2)+1; i < s.length(); i++){
-				lastHalf += Character.toString(s.charAt(i));
-			}
-			return firstHalf+lastHalf;
+			firstHalf = s.substring(0, (s.length()/2-1));
+			lastHalf = s.substring((s.length()/2+1));
 		}
 		else {
-			for (int i = 0; i < (s.length()/2); i++){
-				firstHalf += Character.toString(s.charAt(i));
-			}
-			for (int i = (s.length()/2)+1; i < s.length(); i++){
-				lastHalf += Character.toString(s.charAt(i));
-			}
-			return firstHalf+lastHalf;
+			firstHalf = s.substring(0, (s.length()/2));
+			lastHalf = s.substring((s.length()/2+1));
 		}
+			return firstHalf+lastHalf;
 	}
 		
 	//this method determines whether a string is a palindrome
